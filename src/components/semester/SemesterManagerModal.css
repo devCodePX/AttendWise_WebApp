@@ -1,0 +1,146 @@
+.semester-modal-content {
+  max-width: 520px;
+}
+
+.semester-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.create-semester-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.create-semester-row input {
+  flex: 1;
+}
+
+.semesters-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.semester-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  gap: 0.75rem;
+  transition: all var(--transition-fast);
+}
+.semester-item-row:hover {
+  border-color: #cbd5e1;
+}
+
+.semester-row-active {
+  border-color: var(--color-primary-border);
+  background-color: #f8fafc;
+}
+
+.semester-info-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.btn-toggle-active {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.semester-text-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.semester-name-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.active-tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+.edit-semester-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.edit-semester-inline input {
+  padding: 0.35rem 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.btn-save-inline, .btn-cancel-inline {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.6rem;
+}
+
+.semester-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.btn-icon-action {
+  background: transparent;
+  border: none;
+  padding: 0.35rem;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.btn-icon-action:hover:not(:disabled) {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.btn-icon-action.text-danger:hover:not(:disabled) {
+  color: var(--color-shortage);
+  background-color: var(--color-shortage-bg);
+}
+
+@media (max-width: 480px) {
+  .create-semester-row {
+    flex-direction: column;
+  }
+  .create-semester-row button {
+    width: 100%;
+  }
+  .semester-item-row {
+    padding: 0.625rem 0.75rem;
+  }
+  .semester-name-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 140px;
+  }
+}

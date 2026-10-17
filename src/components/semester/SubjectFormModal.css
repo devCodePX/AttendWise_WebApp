@@ -1,0 +1,62 @@
+.subject-modal-content {
+  max-width: 500px;
+}
+
+.subject-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.threshold-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.threshold-val-display {
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+}
+
+.threshold-slider-row {
+  margin: 0.5rem 0;
+}
+
+.preset-thresholds-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.preset-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.preset-btn {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.preset-btn:hover {
+  background-color: #f1f5f9;
+  color: var(--text-primary);
+}
+
+.preset-btn.preset-active {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-border);
+  color: var(--color-primary);
+}

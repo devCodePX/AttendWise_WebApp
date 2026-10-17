@@ -1,0 +1,155 @@
+.mark-modal-content {
+  max-width: 520px;
+}
+
+.mark-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field-icon {
+  position: absolute;
+  left: 0.75rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  padding-left: 2.25rem;
+}
+
+/* Status selection grid */
+.status-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.625rem;
+  margin-top: 0.25rem;
+}
+
+.status-option {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.5rem;
+  background-color: var(--bg-surface);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.status-option input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.status-option-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.status-option-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.status-option-desc {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+/* Active status borders */
+.option-present-active {
+  border-color: var(--color-safe);
+  background-color: var(--color-safe-bg);
+  box-shadow: 0 0 0 2px var(--color-safe-border);
+}
+
+.option-absent-active {
+  border-color: var(--color-shortage);
+  background-color: var(--color-shortage-bg);
+  box-shadow: 0 0 0 2px var(--color-shortage-border);
+}
+
+.option-cancelled-active {
+  border-color: var(--color-cancelled);
+  background-color: var(--color-cancelled-bg);
+  box-shadow: 0 0 0 2px var(--color-cancelled-border);
+}
+
+/* Clarification box */
+.status-clarification-box {
+  margin-top: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+}
+
+.clarification-cancelled {
+  color: var(--color-cancelled-text);
+}
+.clarification-absent {
+  color: var(--color-shortage-text);
+}
+.clarification-present {
+  color: var(--color-safe-text);
+}
+
+@media (max-width: 480px) {
+  .status-selector-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .status-option {
+    padding: 0.625rem 0.875rem;
+    text-align: left;
+  }
+  .status-option-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .status-option-desc {
+    margin-left: auto;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .status-option-content {
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .status-option-desc {
+    margin-left: 0;
+    width: 100%;
+    font-size: 0.6875rem;
+  }
+}

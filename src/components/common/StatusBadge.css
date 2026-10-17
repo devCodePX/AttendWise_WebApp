@@ -1,0 +1,48 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.status-badge-small {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.status-badge-medium {
+  font-size: 0.8125rem;
+  padding: 0.35rem 0.65rem;
+}
+
+/* Safe (Green) */
+.status-badge-safe {
+  background-color: var(--color-safe-bg);
+  color: var(--color-safe-text);
+  border: 1px solid var(--color-safe-border);
+}
+
+/* Caution (Amber) */
+.status-badge-caution {
+  background-color: var(--color-caution-bg);
+  color: var(--color-caution-text);
+  border: 1px solid var(--color-caution-border);
+}
+
+/* Shortage (Rose/Red) */
+.status-badge-shortage {
+  background-color: var(--color-shortage-bg);
+  color: var(--color-shortage-text);
+  border: 1px solid var(--color-shortage-border);
+}
+
+/* Unrecorded / No held classes (Slate) */
+.status-badge-unrecorded {
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}

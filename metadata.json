@@ -1,0 +1,6 @@
+{
+  "name": "AttendWise",
+  "description": "College attendance tracker with custom thresholds, cancelled class handling, and What-If bunk planner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

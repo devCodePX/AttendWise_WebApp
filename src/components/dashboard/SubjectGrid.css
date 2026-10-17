@@ -1,0 +1,71 @@
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.subjects-grid > * {
+  min-width: 0;
+}
+
+.subjects-empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-surface);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.empty-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.empty-heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.empty-subtext {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  max-width: 440px;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* Tablet screens (769px to 1100px): 2 columns */
+@media (max-width: 1100px) {
+  .subjects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* Mobile & Small Tablet (<= 768px): Strictly 1 column */
+@media (max-width: 768px) {
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .subjects-empty-container {
+    padding: 2.5rem 1rem;
+  }
+}
